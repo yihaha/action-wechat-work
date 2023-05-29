@@ -1,7 +1,7 @@
 name: Send notification on push
 on: [push]
-schedule:
-#早上10点0分
+    schedule:
+    #早上10点0分
     - cron: '50 9 * * *'
 jobs:
   send-msg:
