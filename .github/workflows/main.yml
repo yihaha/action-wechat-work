@@ -1,8 +1,8 @@
 name: Send notification on push
 on: [push]
 schedule:
-	#早上10点0分
-    - cron: '0 2 * * *'
+#早上10点0分
+    - cron: '50 9 * * *'
 jobs:
   send-msg:
     runs-on: ${{ matrix.os }}
@@ -12,7 +12,7 @@ jobs:
     steps:
       # 纯文本类型
       - name: WeChat Work notification by text
-        uses: chf007/action-wechat-work@master
+        uses: yihah/action-wechat-work@master
         env:
           WECHAT_WORK_BOT_WEBHOOK: ${{https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=84eabebc-0240-40d7-9d3d-6159bbad74a1}}
         with:
