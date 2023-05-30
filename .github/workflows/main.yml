@@ -13,7 +13,7 @@ jobs:
     steps:
       # 纯文本类型
       - name: WeChat Work notification by text
-        uses: yihaha/action-wechat-work@Weekly meeting
+        uses: yihaha/action-wechat-work@Weekly-meeting
         env:
           WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
         with:
