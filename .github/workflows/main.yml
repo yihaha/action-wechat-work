@@ -8,7 +8,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+      #[ubuntu-latest, windows-latest, macos-latest] 选一个就行，不然会发3条
+        os: [ubuntu-latest]
     steps:
       # 纯文本类型
       - name: WeChat Work notification by text
