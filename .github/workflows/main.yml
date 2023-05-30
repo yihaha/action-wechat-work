@@ -2,7 +2,7 @@ name: Send notification on push
 on:
   schedule:
 #早上10点0分，周六周日不用
-    - cron: "5 3 * * 1-5"
+    - cron: "10 3 * * 2"
 jobs:
   send-msg:
     runs-on: ${{ matrix.os }}
@@ -13,10 +13,10 @@ jobs:
     steps:
       # 纯文本类型
       - name: WeChat Work notification by text
-        uses: yihaha/action-wechat-work@master
+        uses: yihaha/action-wechat-work@Weekly meeting
         env:
           WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
         with:
           msgtype: text
-          content: "记得填写一下每日计划\n https://doc.weixin.qq.com/sheet/e3_AaYA9AYuADEQgI7NQ3hS1GmAFD21c?scode=AC0AuAecAAo06sndciAaYA9AYuADE"
+          content: "今天周会"
           mentioned_list: '["@all"]'
