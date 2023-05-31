@@ -2,7 +2,7 @@ name: Send notification on push
 on:
   schedule:
 #早上10点0分，周六周日不用
-    - cron: "5 3 * * 1-5"
+    - cron: "5 2 * * 1-5"
 jobs:
   send-msg:
     runs-on: ${{ matrix.os }}
