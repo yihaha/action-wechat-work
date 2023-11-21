@@ -18,5 +18,5 @@ jobs:
           WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
         with:
           msgtype: text
-          content: "记得填写一下每日计划\n ${{secrets.DOCUMENT_URL}}\n"
-          mentioned_list: '["@all"]'
+          content: "记得填写一下每日计划@all \n ${{secrets.DOCUMENT_URL}}\n"
+          # mentioned_list: '["@all"]'
